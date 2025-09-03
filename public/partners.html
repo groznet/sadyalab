@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Партнеры - СадыАлаб</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="assets/js/main.js" defer></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2E7D32',
+                        secondary: '#FF8F00',
+                        accent: '#D32F2F',
+                        light: '#F5F5F5',
+                        dark: '#1B5E20'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-pattern {
+            background-color: #2E7D32;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        .transition-transform {
+            transition: transform 0.3s ease;
+        }
+        .partner-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .partner-logo {
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid #e5e7eb;
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50 text-gray-800">
+    <!-- Header placeholder(included by JS) -->
+    <div id="header-placeholder"></div>
+
+    <main>
+        <!-- Page Header -->
+        <section class="hero-pattern text-white py-12">
+            <div class="container mx-auto px-4">
+                <div class="text-center">
+                    <h1 class="text-4xl font-bold mb-4">Партнерская программа</h1>
+                    <p class="text-xl max-w-2xl mx-auto">Сотрудничаем с магазинами, ресторанами и поставщиками по всей России</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section class="py-12 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12">Преимущества партнерства</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="text-center p-6 rounded-lg bg-light hover:shadow-md transition">
+                        <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-chart-line text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Выгодные условия</h3>
+                        <p class="text-gray-600">Специальные оптовые цены и индивидуальные условия сотрудничества для партнеров</p>
+                    </div>
+                    <div class="text-center p-6 rounded-lg bg-light hover:shadow-md transition">
+                        <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-truck text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Бесплатная доставка</h3>
+                        <p class="text-gray-600">Бесплатная доставка при заказах от 5000 рублей для наших партнеров</p>
+                    </div>
+                    <div class="text-center p-6 rounded-lg bg-light hover:shadow-md transition">
+                        <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-headset text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Персональный менеджер</h3>
+                        <p class="text-gray-600">Каждому партнеру назначается персональный менеджер для оперативного решения вопросов</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Partners Grid -->
+        <section class="py-12 bg-light">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12">Наши партнеры</h2>
+                
+                <div class="mb-8">
+                    <h3 class="text-2xl font-semibold mb-6 text-center">Магазины и супермаркеты</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                        <div class="partner-card bg-white p-4 rounded-lg shadow-md transition-transform text-center">
+                            <div class="partner-logo mx-auto mb-4">
+                                <div class="w-24 h-24 bg-gray-200 rounded-full flex items-center justify-center text-primary text-2xl font-bold">
+                                    МАГ
+                                </div>
+                            </div>
+                            <h4 class="font-semibold">Магазин "Фруктовый Рай"</h4>
+                            <p class="text-gray-600 text-sm">Грозный</p>
+                        </div>
+                        <div class="partner-card bg-white p-4 rounded-lg shadow-md transition-transform text-center">
+                            <div class="partner-logo mx-auto mb-4">
+                                <div class="w-24 h-24 bg-gray-200 rounded-full flex items-center justify-center text-primary text-2xl font-bold">
+                                    СМ
+                                </div>
+                            </div>
+                            <h4 class="font-semibold">Супермаркет "Весна"</h4>
+                            <p class="text-gray-600 text-sm">Назрань</p>
+                        </div>
+                        <div class="partner-card bg-white p-4 rounded-lg shadow-md transition-transform text-center">
+                            <div class="partner-logo mx-auto mb-4">
+                                <div class="w-24 h-24 bg-gray-200 rounded-full flex items-center justify-center text-primary text-2xl font-bold">
+                                    ПР
+                                </div>
+                            </div>
+                            <h4 class="font-semibold">Продуктовый "Алаб"</h4>
+                            <p class="text-gray-600 text-sm">Гудермес</p>
+                        </div>
+                        <div class="partner-card bg-white p-4 rounded-lg shadow-md transition-transform text-center">
+                            <div class="partner-logo mx-auto mb-4">
+                                <div class="w-24 h-24 bg-gray-200 rounded-full flex items-center justify-center text-primary text-2xl font-bold">
+                                    МК
+                                </div>
+                            </div>
+                            <h4 class="font-semibold">"Мир Кавказа"</h4>
+                            <p class="text-gray-600 text-sm">Владикавказ</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mb-8">
+                    <h3 class="text-2xl font-semibold mb-6 text-center">Рестораны и кафе</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                        <div class="partner-card bg-white p-4 rounded-lg shadow-md transition-transform text-center">
+                            <div class="partner-logo mx-auto mb-4">
+                                <div class="w-24 h-24 bg-gray-200 rounded-full flex items-center justify-center text-primary text-2xl font-bold">
+                                    РР
+                                </div>
+                            </div>
+                            <h4 class="font-semibold">Ресторан "Райский Сад"</h4>
+                            <p class="text-gray-600 text-sm">Грозный</p>
+                        </div>
+                        <div class="partner-card bg-white p-4 rounded-lg shadow-md transition-transform text-center">
+                            <div class="partner-logo mx-auto mb-4">
+                                <div class="w-24 h-24 bg-gray-200 rounded-full flex items-center justify-center text-primary text-2xl font-bold">
+                                    КШ
+                                </div>
+                            </div>
+                            <h4 class="font-semibold">Кафе "Шелковый Путь"</h4>
+                            <p class="text-gray-600 text-sm">Грозный</p>
+                        </div>
+                        <div class="partner-card bg-white p-4 rounded-lg shadow-md transition-transform text-center">
+                            <div class="partner-logo mx-auto mb-4">
+                                <div class="w-24 h-24 bg-gray-200 rounded-full flex items-center justify-center text-primary text-2xl font-bold">
+                                    БК
+                                </div>
+                            </div>
+                            <h4 class="font-semibold">"Беркат" Кафе</h4>
+                            <p class="text-gray-600 text-sm">Аргун</p>
+                        </div>
+                        <div class="partner-card bg-white p-4 rounded-lg shadow-md transition-transform text-center">
+                            <div class="partner-logo mx-auto mb-4">
+                                <div class="w-24 h-24 bg-gray-200 rounded-full flex items-center justify-center text-primary text-2xl font-bold">
+                                    СК
+                                </div>
+                            </div>
+                            <h4 class="font-semibold">Столовая "Кавказ"</h4>
+                            <p class="text-gray-600 text-sm">Назрань</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-2xl font-semibold mb-6 text-center">Поставщики сырья</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                        <div class="partner-card bg-white p-4 rounded-lg shadow-md transition-transform text-center">
+                            <div class="partner-logo mx-auto mb-4">
+                                <div class="w-24 h-24 bg-gray-200 rounded-full flex items-center justify-center text-primary text-2xl font-bold">
+                                    СФ
+                                </div>
+                            </div>
+                            <h4 class="font-semibold">"Сады Чечни"</h4>
+                            <p class="text-gray-600 text-sm">Фермерское хозяйство</p>
+                        </div>
+                        <div class="partner-card bg-white p-4 rounded-lg shadow-md transition-transform text-center">
+                            <div class="partner-logo mx-auto mb-4">
+                                <div class="w-24 h-24 bg-gray-200 rounded-full flex items-center justify-center text-primary text-2xl font-bold">
+                                    ЭО
+                                </div>
+                            </div>
+                            <h4 class="font-semibold">"Эко-Овощи"</h4>
+                            <p class="text-gray-600 text-sm">Сельхозкооператив</p>
+                        </div>
+                        <div class="partner-card bg-white p-4 rounded-lg shadow-md transition-transform text-center">
+                            <div class="partner-logo mx-auto mb-4">
+                                <div class="w-24 h-24 bg-gray-200 rounded-full flex items-center justify-center text-primary text-2xl font-bold">
+                                    ДФ
+                                </div>
+                            </div>
+                            <h4 class="font-semibold">"Джамиля Фрут"</h4>
+                            <p class="text-gray-600 text-sm">Поставщик фруктов</p>
+                        </div>
+                        <div class="partner-card bg-white p-4 rounded-lg shadow-md transition-transform text-center">
+                            <div class="partner-logo mx-auto mb-4">
+                                <div class="w-24 h-24 bg-gray-200 rounded-full flex items-center justify-center text-primary text-2xl font-bold">
+                                    АП
+                                </div>
+                            </div>
+                            <h4 class="font-semibold">Агрохолдинг "Плодородие"</h4>
+                            <p class="text-gray-600 text-sm">Крупный поставщик</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Partnership Types -->
+        <section class="py-12 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12">Виды партнерства</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-light p-6 rounded-lg">
+                        <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white mb-4">
+                            <i class="fas fa-store"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Для магазинов</h3>
+                        <p class="text-gray-600 mb-4">Поставки нашей продукции в розничные магазины и супермаркеты с специальными оптовыми ценами.</p>
+                        <ul class="text-gray-600 space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                                <span>Скидки от 15% при заказе от 50 000 руб.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                                <span>Бесплатная доставка при крупных заказах</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                                <span>Маркетинговая поддержка</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-light p-6 rounded-lg">
+                        <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white mb-4">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Для ресторанов и кафе</h3>
+                        <p class="text-gray-600 mb-4">Поставки натуральных соков для предприятий общественного питания с гибкими условиями сотрудничества.</p>
+                        <ul class="text-gray-600 space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                                <span>Индивидуальные условия оплаты</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                                <span>Регулярные поставки по графику</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                                <span>Брендирование меню</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-light p-6 rounded-lg">
+                        <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white mb-4">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Для поставщиков сырья</h3>
+                        <p class="text-gray-600 mb-4">Сотрудничество с фермерами и сельхозпроизводителями для закупки качественного сырья.</p>
+                        <ul class="text-gray-600 space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                                <span>Долгосрочные контракты</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                                <span>Техническая поддержка фермеров</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                                <span>Справедливые цены на продукцию</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How to Become Partner -->
+        <section class="py-12 bg-light">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12">Как стать партнером</h2>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4 text-white text-xl font-bold">1</div>
+                        <h3 class="text-xl font-semibold mb-3">Заявка</h3>
+                        <p class="text-gray-600">Заполните форму на сайте или свяжитесь с нами по телефону</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4 text-white text-xl font-bold">2</div>
+                        <h3 class="text-xl font-semibold mb-3">Обсуждение</h3>
+                        <p class="text-gray-600">Наш менеджер свяжется с вами для обсуждения деталей сотрудничества</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4 text-white text-xl font-bold">3</div>
+                        <h3 class="text-xl font-semibold mb-3">Договор</h3>
+                        <p class="text-gray-600">Заключаем договор с индивидуальными условиями для вашего бизнеса</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4 text-white text-xl font-bold">4</div>
+                        <h3 class="text-xl font-semibold mb-3">Начало работы</h3>
+                        <p class="text-gray-600">Осуществляем первую поставку и начинаем плодотворное сотрудничество</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-16 bg-primary text-white">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl font-bold mb-4">Станьте нашим партнером</h2>
+                <p class="text-xl mb-8 max-w-2xl mx-auto">Присоединяйтесь к числу наших партнеров и получите выгодные условия сотрудничества</p>
+                <a href="/contact" class="inline-block bg-secondary hover:bg-orange-700 text-white font-bold py-3 px-8 rounded-lg transition mr-4">
+                    Оставить заявку
+                </a>
+                <a href="tel:+79288970277" class="inline-block bg-white hover:bg-gray-100 text-primary font-bold py-3 px-8 rounded-lg transition">
+                    <i class="fas fa-phone mr-2"></i>+7 928 897-02-77
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer placeholder(included by JS) -->
+    <div id="footer-placeholder"></div>
+</body>
+</html>
