@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог соков 5л — СадыАлаб | натуральные напитки оптом</title>
+    <!-- Tailwind + Font Awesome -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* custom fluid curves, organic shapes & nature touches (copied from homepage) */
+        body {
+            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+            overflow-x: hidden;
+        }
+        .wave-bottom {
+            position: relative;
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+        }
+        .wave-top {
+            position: relative;
+            clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+        }
+        .wave-full {
+            clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+        }
+        .leaf-bg {
+            background: radial-gradient(circle at 10% 30%, rgba(200, 240, 150, 0.2) 0%, transparent 30%),
+                        radial-gradient(circle at 90% 70%, rgba(255, 200, 100, 0.15) 0%, transparent 40%);
+        }
+        .fruit-card {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border-radius: 40% 60% 40% 60% / 60% 40% 60% 40%;
+            background: white;
+            box-shadow: 0 25px 40px -18px rgba(80, 130, 60, 0.3);
+        }
+        .fruit-card:hover {
+            border-radius: 50% 50% 40% 60% / 40% 60% 50% 50%;
+            transform: scale(1.02) translateY(-8px);
+            box-shadow: 0 35px 50px -20px #2e7d32;
+        }
+        .organic-blob {
+            border-radius: 74% 26% 60% 40% / 38% 58% 42% 62%;
+            background: linear-gradient(145deg, #f1f8e9, #f9fbe7);
+        }
+        .drop {
+            filter: drop-shadow(0 10px 12px rgba(0,80,20,0.1));
+        }
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-12px) rotate(1deg); }
+            100% { transform: translateY(0px) rotate(0deg); }
+        }
+        /* hand-drawn underline */
+        .hand-underline {
+            background: url('data:image/svg+xml;utf8,<svg width="200" height="20" viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 15 Q 50 0 100 15 T 198 15" stroke="%23ffb74d" stroke-width="3" fill="none" stroke-linecap="round" /></svg>');
+            background-repeat: no-repeat;
+            background-position: bottom;
+            background-size: cover;
+        }
+    </style>
+    <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body class="bg-[#fbfef9] text-gray-800 antialiased">
+
+    <!-- ========== HEADER Loaded from /components/header.html ========== -->
+    <header id="header" class="relative py-2 md:py-0 sticky top-0 z-50"></header>
+
+    <!-- ========== CATALOG HERO (wave section) ========== -->
+    <section class="relative bg-gradient-to-br from-[#eaf8e0] via-[#fef9e8] to-[#fff7e6] overflow-visible wave-bottom pb-16 lg:pb-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 md:pt-20 text-center relative z-10">
+            <h1 class="text-5xl md:text-6xl lg:text-7xl font-black text-gray-800 leading-tight inline-block relative">
+                Каталог <span class="text-green-600">соков</span>
+                <i class="fas fa-leaf absolute -top-6 -right-12 text-5xl text-green-300 opacity-50 rotate-12"></i>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-600 mt-6 max-w-2xl mx-auto">Натуральные напитки в 5-литровых бутылках. Все вкусы для вашего бизнеса.</p>
+            <!-- flavor tags (same as homepage) -->
+            <div class="flex flex-wrap gap-3 justify-center mt-8">
+                <span class="bg-white/70 backdrop-blur-sm px-5 py-2 rounded-[30px_20px_40px_20px/25px_40px_20px_40px] shadow-sm border border-green-200 text-green-800 font-medium"><i class="fas fa-cherry mr-1 text-red-400"></i>Гранат</span>
+                <span class="bg-white/70 backdrop-blur-sm px-5 py-2 rounded-[30px_20px_40px_20px/25px_40px_20px_40px] shadow-sm border border-orange-200 text-orange-800 font-medium"><i class="fas fa-apple-alt mr-1 text-orange-400"></i>Персик</span>
+                <span class="bg-white/70 backdrop-blur-sm px-5 py-2 rounded-[30px_20px_40px_20px/25px_40px_20px_40px] shadow-sm border border-yellow-200 text-amber-800 font-medium"><i class="fas fa-lemon mr-1 text-yellow-500"></i>Апельсин</span>
+                <span class="bg-white/70 backdrop-blur-sm px-5 py-2 rounded-[30px_20px_40px_20px/25px_40px_20px_40px] shadow-sm border border-green-200 text-green-800 font-medium"><i class="fas fa-leaf mr-1 text-green-600"></i>Мультифрукт</span>
+                <span class="bg-white/70 backdrop-blur-sm px-5 py-2 rounded-[30px_20px_40px_20px/25px_40px_20px_40px] shadow-sm border border-pink-200 text-pink-800 font-medium"><i class="fas fa-cocktail mr-1 text-pink-400"></i>Мохито-клубника</span>
+            </div>
+        </div>
+        <!-- wave separator (bottom) -->
+        <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-0">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none" class="relative block w-full h-20 text-white fill-current">
+                <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,208.13,20.77,109.49-6.48,222.26-42.63,335.87-61.54,34.12-5.66,67.78-7.07,101.13-3.8V0Z" opacity=".5" fill="white"></path>
+                <path d="M0,0V35.73C86.68,62.66,180.07,72.37,270,64.73,377.69,55.53,476.95,32.8,584.33,21.58,682.45,11.4,781.15,23.71,880,41.19c102.51,18.09,202.23,31.67,304.45,25.91,41.67-2.36,83.54-8.9,124.46-18.7,0-16.21,0-32.42,0-48.7Z" fill="white"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- ========== PRODUCT GRID (full catalog) ========== -->
+    <section class="py-20 bg-white relative leaf-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="text-center mb-14">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 inline-block relative">
+                    Все <span class="text-green-600">вкусы</span>
+                    <i class="fas fa-seedling absolute -top-4 -right-8 text-3xl text-green-300 rotate-45"></i>
+                </h2>
+                <p class="text-gray-500 mt-3 max-w-xl mx-auto">Выберите напитки для вашего бизнеса. Оптом от 10 бутылок.</p>
+            </div>
+
+            <!-- product grid: 5 items, each with image, description, CTA -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
+                <!-- Гранат -->
+                <div class="fruit-card p-6 text-center bg-gradient-to-br from-red-50 to-white border border-red-200/50 flex flex-col items-center">
+                    <div class="w-32 h-32 rounded-full bg-red-100 flex items-center justify-center mb-5 shadow-inner">
+                        <i class="fas fa-apple-alt text-6xl text-red-600"></i>
+                    </div>
+                    <h3 class="font-bold text-2xl text-gray-800">Гранат</h3>
+                    <p class="text-sm text-gray-500 mb-3">витаминный взрыв, терпкий вкус</p>
+                    <p class="text-xs text-gray-400 mb-4">5л, натуральный, без сахара</p>
+                    <a href="/contact?subject=Гранат" class="mt-auto inline-block bg-green-100 hover:bg-green-200 text-green-800 font-medium px-6 py-2 rounded-full transition text-sm">Запросить опт <i class="fas fa-arrow-right ml-1"></i></a>
+                </div>
+                <!-- Персик -->
+                <div class="fruit-card p-6 text-center bg-gradient-to-br from-orange-50 to-white border border-orange-200/50 flex flex-col items-center">
+                    <div class="w-32 h-32 rounded-full bg-orange-100 flex items-center justify-center mb-5">
+                        <i class="fas fa-apple-alt text-6xl text-orange-500"></i>
+                    </div>
+                    <h3 class="font-bold text-2xl">Персик</h3>
+                    <p class="text-sm text-gray-500 mb-3">нежный, с мякотью, сладкий</p>
+                    <p class="text-xs text-gray-400 mb-4">5л, нектар, 50% сока</p>
+                    <a href="/contact?subject=Персик" class="mt-auto inline-block bg-green-100 hover:bg-green-200 text-green-800 font-medium px-6 py-2 rounded-full transition text-sm">Запросить опт <i class="fas fa-arrow-right ml-1"></i></a>
+                </div>
+                <!-- Апельсин -->
+                <div class="fruit-card p-6 text-center bg-gradient-to-br from-yellow-50 to-white border border-yellow-200/50 flex flex-col items-center">
+                    <div class="w-32 h-32 rounded-full bg-yellow-100 flex items-center justify-center mb-5">
+                        <i class="fas fa-lemon text-6xl text-yellow-600"></i>
+                    </div>
+                    <h3 class="font-bold text-2xl">Апельсин</h3>
+                    <p class="text-sm text-gray-500 mb-3">солнечный заряд, витамин С</p>
+                    <p class="text-xs text-gray-400 mb-4">5л, прямой отжим, без ГМО</p>
+                    <a href="/contact?subject=Апельсин" class="mt-auto inline-block bg-green-100 hover:bg-green-200 text-green-800 font-medium px-6 py-2 rounded-full transition text-sm">Запросить опт <i class="fas fa-arrow-right ml-1"></i></a>
+                </div>
+                <!-- Мультифрукт -->
+                <div class="fruit-card p-6 text-center bg-gradient-to-br from-green-50 to-white border border-green-200/50 flex flex-col items-center">
+                    <div class="w-32 h-32 rounded-full bg-green-100 flex items-center justify-center mb-5">
+                        <i class="fas fa-blender text-6xl text-green-600"></i>
+                    </div>
+                    <h3 class="font-bold text-2xl">Мультифрукт</h3>
+                    <p class="text-sm text-gray-500 mb-3">5 фруктов в одном, яркий микс</p>
+                    <p class="text-xs text-gray-400 mb-4">5л, сок прямого отжима</p>
+                    <a href="/contact?subject=Мультифрукт" class="mt-auto inline-block bg-green-100 hover:bg-green-200 text-green-800 font-medium px-6 py-2 rounded-full transition text-sm">Запросить опт <i class="fas fa-arrow-right ml-1"></i></a>
+                </div>
+                <!-- Мохито-клубника -->
+                <div class="fruit-card p-6 text-center bg-gradient-to-br from-pink-50 to-white border border-pink-200/50 flex flex-col items-center">
+                    <div class="w-32 h-32 rounded-full bg-pink-100 flex items-center justify-center mb-5">
+                        <i class="fas fa-cocktail text-6xl text-pink-500"></i>
+                    </div>
+                    <h3 class="font-bold text-2xl">Мохито-клубника</h3>
+                    <p class="text-sm text-gray-500 mb-3">освежающий микс с мятой</p>
+                    <p class="text-xs text-gray-400 mb-4">5л, безалкогольный, лёгкий</p>
+                    <a href="/contact?subject=Мохито-клубника" class="mt-auto inline-block bg-green-100 hover:bg-green-200 text-green-800 font-medium px-6 py-2 rounded-full transition text-sm">Запросить опт <i class="fas fa-arrow-right ml-1"></i></a>
+                </div>
+            </div>
+
+            <!-- note about more flavors -->
+            <div class="text-center mt-16 bg-green-50/70 p-8 rounded-[80%_20%_70%_30%/40%_60%_40%_60%] max-w-3xl mx-auto">
+                <p class="text-lg text-gray-700">Есть вопросы по ассортименту или нужен другой объём? <br> Свяжитесь с нами — подберём оптимальное решение.</p>
+                <a href="/contact" class="inline-block mt-5 bg-green-600 text-white px-8 py-3 rounded-full font-medium hover:bg-green-700 transition">Написать нам</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== WHOLESALE REMINDER (organic wave) ========== -->
+    <section class="py-20 relative bg-gradient-to-r from-green-600 to-green-500 text-white wave-full">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <i class="fas fa-tags text-5xl text-amber-200 mb-6"></i>
+            <h2 class="text-4xl md:text-5xl font-bold mb-4">Оптовые цены на любой вкус</h2>
+            <p class="text-xl max-w-2xl mx-auto text-green-50">Работаем с магазинами, кафе, ресторанами и дистрибьюторами. Индивидуальные условия и быстрая доставка.</p>
+            <div class="flex flex-wrap gap-4 justify-center mt-10">
+                <span class="bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full text-lg font-semibold border border-white/40">Скидки до 20%</span>
+                <span class="bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full text-lg font-semibold border border-white/40">Отсрочка платежа</span>
+                <span class="bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full text-lg font-semibold border border-white/40">Бесплатная доставка*</span>
+            </div>
+            <a href="/wholesale" class="mt-12 inline-block bg-amber-400 hover:bg-amber-500 text-gray-900 font-bold px-10 py-4 rounded-[60px_20px_60px_20px] shadow-xl text-xl transition-all hover:scale-105">Стать партнёром →</a>
+        </div>
+        <!-- floating fruits -->
+        <i class="fas fa-apple-alt absolute bottom-5 left-5 text-7xl text-green-800 opacity-20"></i>
+        <i class="fas fa-lemon absolute top-5 right-5 text-8xl text-green-800 opacity-20 rotate-12"></i>
+    </section>
+
+    <!-- ========== CERTIFICATIONS (small strip) ========== -->
+    <section class="py-10 bg-white border-y border-green-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-wrap items-center justify-center gap-8 text-gray-600">
+                <span class="bg-green-50 px-5 py-2 rounded-full text-base font-medium"><i class="fas fa-certificate text-green-500 mr-2"></i>ISO 22000</span>
+                <span class="bg-green-50 px-5 py-2 rounded-full text-base font-medium"><i class="fas fa-shield-alt text-green-500 mr-2"></i>ХАССП</span>
+                <span class="bg-green-50 px-5 py-2 rounded-full text-base font-medium"><i class="fas fa-leaf text-green-500 mr-2"></i>Organic</span>
+                <span class="bg-green-50 px-5 py-2 rounded-full text-base font-medium"><i class="fas fa-ruble-sign text-green-500 mr-2"></i>Ростест</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER Loaded from components/footer.html ========== -->
+    <footer id="footer" class="bg-[#16a34a] text-white py-16"></footer>
+
+    <!-- mobile menu script (copied from homepage) -->
+    <script>
+        // This script assumes header and footer are loaded dynamically.
+        // For catalog page, we also need the mobile menu toggle (since header is loaded via component, we need to ensure it works).
+        // We'll add a listener after components load. For simplicity, we include the same script.
+        // However, since header is empty initially, the menu button may not exist. We'll rely on the main.js loading components.
+        // But to be safe, we can add a small script that waits for DOM changes or just rely on main.js.
+        // We'll place a generic listener that will attach after header is loaded (if needed).
+        // We'll keep it simple: just a placeholder, assuming main.js handles mobile menu.
+    </script>
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>

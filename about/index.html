@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О компании СадыАлаб — производитель натуральных соков в Грозном</title>
+    <!-- Tailwind + Font Awesome -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* custom fluid curves, organic shapes & nature touches (same as homepage) */
+        body {
+            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+            overflow-x: hidden;
+        }
+        .wave-bottom {
+            position: relative;
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+        }
+        .wave-top {
+            position: relative;
+            clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+        }
+        .wave-full {
+            clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+        }
+        .leaf-bg {
+            background: radial-gradient(circle at 10% 30%, rgba(200, 240, 150, 0.2) 0%, transparent 30%),
+                        radial-gradient(circle at 90% 70%, rgba(255, 200, 100, 0.15) 0%, transparent 40%);
+        }
+        .fruit-card {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border-radius: 40% 60% 40% 60% / 60% 40% 60% 40%;
+            background: white;
+            box-shadow: 0 25px 40px -18px rgba(80, 130, 60, 0.3);
+        }
+        .fruit-card:hover {
+            border-radius: 50% 50% 40% 60% / 40% 60% 50% 50%;
+            transform: scale(1.02) translateY(-8px);
+            box-shadow: 0 35px 50px -20px #2e7d32;
+        }
+        .organic-blob {
+            border-radius: 74% 26% 60% 40% / 38% 58% 42% 62%;
+            background: linear-gradient(145deg, #f1f8e9, #f9fbe7);
+        }
+        .drop {
+            filter: drop-shadow(0 10px 12px rgba(0,80,20,0.1));
+        }
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-12px) rotate(1deg); }
+            100% { transform: translateY(0px) rotate(0deg); }
+        }
+        /* hand-drawn underline */
+        .hand-underline {
+            background: url('data:image/svg+xml;utf8,<svg width="200" height="20" viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 15 Q 50 0 100 15 T 198 15" stroke="%23ffb74d" stroke-width="3" fill="none" stroke-linecap="round" /></svg>');
+            background-repeat: no-repeat;
+            background-position: bottom;
+            background-size: cover;
+        }
+    </style>
+    <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body class="bg-[#fbfef9] text-gray-800 antialiased">
+
+    <!-- ========== HEADER Loaded from /components/header.html ========== -->
+    <header id="header" class="relative py-2 md:py-0 sticky top-0 z-50"></header>
+
+    <!-- ========== HERO (about) with wave ========== -->
+    <section class="relative bg-gradient-to-br from-[#eaf8e0] via-[#fef9e8] to-[#fff7e6] overflow-visible wave-bottom pb-16 lg:pb-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 md:pt-20 text-center relative z-10">
+            <h1 class="text-5xl md:text-6xl lg:text-7xl font-black text-gray-800 leading-tight inline-block relative">
+                О <span class="text-green-600">компании</span>
+                <i class="fas fa-tree absolute -top-6 -right-12 text-5xl text-green-300 opacity-50 rotate-12"></i>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-600 mt-6 max-w-2xl mx-auto">СадыАлаб — собственное производство натуральных соков в Грозном. Честность, качество и забота о каждом клиенте.</p>
+        </div>
+        <!-- wave separator (bottom) -->
+        <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-0">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none" class="relative block w-full h-20 text-white fill-current">
+                <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,208.13,20.77,109.49-6.48,222.26-42.63,335.87-61.54,34.12-5.66,67.78-7.07,101.13-3.8V0Z" opacity=".5" fill="white"></path>
+                <path d="M0,0V35.73C86.68,62.66,180.07,72.37,270,64.73,377.69,55.53,476.95,32.8,584.33,21.58,682.45,11.4,781.15,23.71,880,41.19c102.51,18.09,202.23,31.67,304.45,25.91,41.67-2.36,83.54-8.9,124.46-18.7,0-16.21,0-32.42,0-48.7Z" fill="white"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- ========== STORY SECTION ========== -->
+    <section class="py-20 bg-white relative leaf-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="relative order-2 md:order-1">
+                    <img src="https://images.unsplash.com/photo-1606787366850-de6330128b1c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="Производство соков СадыАлаб" 
+                         class="rounded-[70%_30%_60%_40%/40%_60%_40%_60%] object-cover w-full h-auto shadow-2xl border-4 border-white/60 floating">
+                    <div class="absolute -bottom-6 -left-6 bg-green-100 rounded-full p-4 shadow-xl">
+                        <i class="fas fa-leaf text-green-700 text-3xl"></i>
+                    </div>
+                </div>
+                <div class="order-1 md:order-2">
+                    <span class="text-green-600 font-bold tracking-wider text-sm">С 2015 ГОДА</span>
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mt-2">История <span class="text-green-600">натурального вкуса</span></h2>
+                    <p class="text-gray-600 text-lg mt-6">Компания СадыАлаб родилась в Грозном из желания создавать по-настоящему живые соки без консервантов и искусственных добавок. Сегодня мы — современное производство полного цикла с собственной лабораторией и командой технологов.</p>
+                    <p class="text-gray-600 text-lg mt-4">Мы гордимся, что наши 5-литровые бутылки выбирают сотни кафе, ресторанов и магазинов по всей России. Потому что мы не идём на компромиссы с качеством.</p>
+                    <div class="mt-8 flex gap-6">
+                        <div class="text-center">
+                            <div class="text-4xl font-black text-green-600">7</div>
+                            <div class="text-sm text-gray-500">этапов контроля</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl font-black text-green-600">24/7</div>
+                            <div class="text-sm text-gray-500">работа лаборатории</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl font-black text-green-600">5л</div>
+                            <div class="text-sm text-gray-500">идеальная тара</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== VALUES (cards with icons) ========== -->
+    <section class="py-20 bg-[#f7fcf7] wave-top wave-bottom">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 inline-block relative">
+                    Наши <span class="text-green-600">принципы</span>
+                    <i class="fas fa-heart absolute -top-4 -right-8 text-3xl text-green-300"></i>
+                </h2>
+                <p class="text-gray-500 mt-3 max-w-xl mx-auto">Четыре опоры, на которых держится СадыАлаб</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- 1 -->
+                <div class="fruit-card p-8 text-center bg-white border border-green-200/50">
+                    <div class="w-20 h-20 mx-auto bg-green-100 rounded-full flex items-center justify-center mb-6 text-3xl text-green-700">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2">100% натурально</h3>
+                    <p class="text-gray-500">Никаких красителей, ароматизаторов и ГМО. Только фрукты, ягоды и чистая вода.</p>
+                </div>
+                <!-- 2 -->
+                <div class="fruit-card p-8 text-center bg-white border border-green-200/50">
+                    <div class="w-20 h-20 mx-auto bg-green-100 rounded-full flex items-center justify-center mb-6 text-3xl text-green-700">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2">Собственная лаборатория</h3>
+                    <p class="text-gray-500">Круглосуточный контроль сырья, полуфабрикатов и готовой продукции.</p>
+                </div>
+                <!-- 3 -->
+                <div class="fruit-card p-8 text-center bg-white border border-green-200/50">
+                    <div class="w-20 h-20 mx-auto bg-green-100 rounded-full flex items-center justify-center mb-6 text-3xl text-green-700">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2">Забота о клиенте</h3>
+                    <p class="text-gray-500">Гибкие условия для оптовиков, быстрая обратная связь и индивидуальный подход.</p>
+                </div>
+                <!-- 4 -->
+                <div class="fruit-card p-8 text-center bg-white border border-green-200/50">
+                    <div class="w-20 h-20 mx-auto bg-green-100 rounded-full flex items-center justify-center mb-6 text-3xl text-green-700">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2">Собственная логистика</h3>
+                    <p class="text-gray-500">Доставляем по Чечне и России своим транспортом, всегда вовремя.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== PRODUCTION HIGHLIGHTS (steps) ========== -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 inline-block relative">
+                    Как мы <span class="text-green-600">работаем</span>
+                    <i class="fas fa-cogs absolute -top-4 -right-8 text-3xl text-green-300"></i>
+                </h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center p-6">
+                    <div class="w-24 h-24 mx-auto bg-green-100 rounded-[50%_50%_30%_70%/60%_40%_60%_40%] flex items-center justify-center mb-6 text-4xl text-green-700 font-bold">1</div>
+                    <h3 class="font-bold text-xl mb-3">Отбор сырья</h3>
+                    <p class="text-gray-500">Работаем только с проверенными фермерскими хозяйствами. Фрукты и ягоды проходят входной контроль.</p>
+                </div>
+                <div class="text-center p-6">
+                    <div class="w-24 h-24 mx-auto bg-green-100 rounded-[60%_40%_70%_30%/40%_60%_40%_60%] flex items-center justify-center mb-6 text-4xl text-green-700 font-bold">2</div>
+                    <h3 class="font-bold text-xl mb-3">Переработка и пастеризация</h3>
+                    <p class="text-gray-500">Щадящая технология сохраняет витамины и вкус. Без консервантов и сахара (кроме нектаров).</p>
+                </div>
+                <div class="text-center p-6">
+                    <div class="w-24 h-24 mx-auto bg-green-100 rounded-[40%_60%_50%_50%/50%_40%_60%_50%] flex items-center justify-center mb-6 text-4xl text-green-700 font-bold">3</div>
+                    <h3 class="font-bold text-xl mb-3">Розлив и упаковка</h3>
+                    <p class="text-gray-500">Автоматическая линия разливает сок в стерильные 5-литровые бутылки. Маркировка, этикетка, отгрузка.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== LOCATION / CONTACT (organic blob with map) ========== -->
+    <section class="py-20 bg-[#f0f9f0] wave-top wave-bottom">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-800 leading-tight">
+                        Наше производство <span class="text-green-600">в Грозном</span>
+                    </h2>
+                    <p class="text-gray-600 text-lg mt-6">Мы находимся в столице Чеченской Республики. Современный цех площадью 2000 м² оснащён итальянским оборудованием. Открыты к сотрудничеству и всегда рады гостям.</p>
+                    <ul class="mt-8 space-y-4 text-gray-600">
+                        <li class="flex items-center gap-3"><i class="fas fa-map-pin text-green-600 text-xl"></i> г. Грозный, ул. Производственная, 10</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-phone-alt text-green-600 text-xl"></i> +7 (928) 000-00-00</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-envelope text-green-600 text-xl"></i> info@sadyalab.ru</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-clock text-green-600 text-xl"></i> Пн-Пт 9:00–18:00, приём заказов 24/7</li>
+                    </ul>
+                    <a href="/contact" class="mt-10 inline-block bg-green-600 hover:bg-green-700 text-white font-semibold px-8 py-4 rounded-[60px_20px_60px_20px/20px_60px_20px_60px] shadow-lg transition-all hover:scale-105">Связаться с нами <i class="fas fa-arrow-right ml-2"></i></a>
+                </div>
+                <div class="relative">
+                    <!-- placeholder map / image -->
+                    <img src="https://images.unsplash.com/photo-1577086664693-894d8405334a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="Карта Грозного" 
+                         class="rounded-[70%_30%_60%_40%/40%_60%_40%_60%] object-cover w-full h-96 shadow-2xl border-4 border-white floating">
+                    <i class="fas fa-location-dot absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-5xl text-red-500 drop-shadow-xl"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== TEAM (optional small section) ========== -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 inline-block relative">
+                    Команда <span class="text-green-600">СадыАлаб</span>
+                    <i class="fas fa-users absolute -top-4 -right-8 text-3xl text-green-300"></i>
+                </h2>
+                <p class="text-gray-500 mt-3 max-w-xl mx-auto">Люди, которые делают ваш любимый сок</p>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="w-40 h-40 mx-auto bg-green-100 rounded-[50%_50%_40%_60%/60%_40%_60%_40%] overflow-hidden border-4 border-white shadow-xl">
+                        <img src="https://images.unsplash.com/placeholder-avatar?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Адам" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="font-bold text-xl mt-4">Адам Алабаев</h4>
+                    <p class="text-gray-500">директор</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-40 h-40 mx-auto bg-green-100 rounded-[40%_60%_50%_50%/50%_40%_60%_50%] overflow-hidden border-4 border-white shadow-xl">
+                        <img src="https://images.unsplash.com/placeholder-avatar?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Марьям" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="font-bold text-xl mt-4">Марьям Даудова</h4>
+                    <p class="text-gray-500">технолог</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-40 h-40 mx-auto bg-green-100 rounded-[60%_40%_70%_30%/30%_70%_40%_60%] overflow-hidden border-4 border-white shadow-xl">
+                        <img src="https://images.unsplash.com/placeholder-avatar?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Рамзан" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="font-bold text-xl mt-4">Рамзан Адамов</h4>
+                    <p class="text-gray-500">логист</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-40 h-40 mx-auto bg-green-100 rounded-[70%_30%_60%_40%/40%_60%_30%_70%] overflow-hidden border-4 border-white shadow-xl">
+                        <img src="https://images.unsplash.com/placeholder-avatar?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Лида" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="font-bold text-xl mt-4">Лида Эльдарова</h4>
+                    <p class="text-gray-500">менеджер по продажам</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CERTIFICATIONS (as seen on homepage) ========== -->
+    <section class="py-12 bg-[#f5fce8] border-y border-green-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-wrap items-center justify-center gap-10 text-gray-600">
+                <span class="bg-white/60 backdrop-blur-sm px-6 py-3 rounded-full text-lg font-medium shadow-sm border border-green-200"><i class="fas fa-certificate text-green-500 mr-2"></i>ISO 22000</span>
+                <span class="bg-white/60 backdrop-blur-sm px-6 py-3 rounded-full text-lg font-medium shadow-sm border border-green-200"><i class="fas fa-shield-alt text-green-500 mr-2"></i>ХАССП</span>
+                <span class="bg-white/60 backdrop-blur-sm px-6 py-3 rounded-full text-lg font-medium shadow-sm border border-green-200"><i class="fas fa-leaf text-green-500 mr-2"></i>Organic (EU)</span>
+                <span class="bg-white/60 backdrop-blur-sm px-6 py-3 rounded-full text-lg font-medium shadow-sm border border-green-200"><i class="fas fa-ruble-sign text-green-500 mr-2"></i>Ростест</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CALL TO ACTION (wholesale) ========== -->
+    <section class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">Станьте нашим партнёром</h2>
+            <p class="text-xl text-gray-600 mb-10">Предложим лучшие условия для вашего бизнеса. От розничных магазинов до крупных дистрибьюторов.</p>
+            <a href="/wholesale" class="inline-block bg-green-600 hover:bg-green-700 text-white font-bold px-12 py-5 rounded-[60px_20px_60px_20px] shadow-2xl text-xl transition-all hover:scale-105">Подробнее об опте →</a>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER Loaded from components/footer.html ========== -->
+    <footer id="footer" class="bg-[#16a34a] text-white py-16"></footer>
+
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>

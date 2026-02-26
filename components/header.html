@@ -1,0 +1,56 @@
+
+<!-- decorative leafy background -->
+<!-- Background image with opacity -->
+<div class="absolute inset-0 bg-[url('/assets/images/header-bg.jpg')] bg-cover bg-center opacity-50"></div>    
+        
+<div class="relative border-b border-green-200/40 shadow-sm">
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16 md:h-20">
+            <!-- logo with leaf -->
+            <a href="/" class="flex items-center space-x-2 group">
+                <div class="w-16 h-16 bg-gradient-to-br from-green-100 to-amber-100 rounded-[40%_60%_50%_50%/50%_40%_60%_50%] flex items-center justify-center text-white text-xl shadow-lg group-hover:rotate-6 transition-transform duration-300">
+                    <img src="/assets/images/logo.png" alt="">
+                </div>
+                <span class="font-bold text-2xl text-amber-600 tracking-tight font-serif">Сады<span class="text-green-600">Алаб</span></span>
+            </a>
+
+            <!-- desktop nav (curvy hover) -->
+            <nav class="hidden md:flex space-x-8 font-medium text-gray-600">
+                <a href="/" class="relative text-green-700 after:absolute after:-bottom-2 after:left-0 after:w-full after:h-1 after:bg-green-400 after:rounded-full after:content-['']">Главная</a>
+                <a href="/catalog" class="hover:text-green-700 transition border-b-2 border-transparent hover:border-green-300 pb-1">Каталог</a>
+                <a href="/about" class="hover:text-green-700 transition border-b-2 border-transparent hover:border-green-300 pb-1">О нас</a>
+                <a href="/production" class="hover:text-green-700 transition border-b-2 border-transparent hover:border-green-300 pb-1">Производство</a>
+                <a href="/wholesale" class="hover:text-green-700 transition border-b-2 border-transparent hover:border-green-300 pb-1">Опт</a>
+                <a href="/blog" class="hover:text-green-700 transition border-b-2 border-transparent hover:border-green-300 pb-1">Блог</a>
+            </nav>
+
+            <!-- contact with organic badge -->
+            <div class="hidden md:flex items-center">
+                <a href="tel:+79280000000" class="bg-amber-50 text-amber-800 px-5 py-2 rounded-[40%_60%_30%_70%/50%_40%_60%_50%] font-medium hover:bg-amber-100 transition drop-shadow flex items-center gap-2"><i class="fas fa-phone-alt text-green-600"></i> +7 (928) 000-00-00</a>
+            </div>
+
+            <!-- mobile hamburger (organic icon) -->
+            <button id="menuBtn" class="md:hidden text-3xl text-green-700 focus:outline-none">
+                <i class="fas fa-seedling"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- mobile menu (leafy overlay) -->
+    <div id="mobileMenu" class="absolute top-full pt-6 left-0 w-full bg-white shadow-lg z-40 hidden md:hidden">
+        <nav class="flex flex-col px-8 space-y-6 text-xl font-medium">
+            <a href="/" class="text-green-700 border-l-4 border-green-400 pl-4">Главная</a>
+            <a href="/catalog" class="text-gray-700 hover:text-green-700 pl-4">Каталог</a>
+            <a href="/about" class="text-gray-700 hover:text-green-700 pl-4">О нас</a>
+            <a href="/production" class="text-gray-700 hover:text-green-700 pl-4">Производство</a>
+            <a href="/wholesale" class="text-gray-700 hover:text-green-700 pl-4">Опт</a>
+            <a href="/blog" class="text-gray-700 hover:text-green-700 pl-4">Блог</a>
+            <a href="/faq" class="text-gray-700 hover:text-green-700 pl-4">FAQ</a>
+            <div class="pt-6 border-t border-green-200">
+                <a href="tel:+79280000000" class="bg-green-100 text-green-800 px-5 py-3 rounded-[40%] block text-center"><i class="fas fa-phone-alt mr-2"></i>Позвонить</a>
+            </div>
+        </nav>
+        <!-- floating leaf decor -->
+        <div class="absolute bottom-10 left-5 text-green-200 text-7xl opacity-30 rotate-12"><i class="fas fa-leaf"></i></div>
+    </div>                 
+</div>
